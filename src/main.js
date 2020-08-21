@@ -409,14 +409,10 @@ function queryUser ( opts, callback )
 						input: buffer
 					}
 
-					if ( allSelected.length ) {
-						if ( _selectedItem ) {
-							allSelected.push( transformResult( _selectedItem ) );
-						}
-						result.selected = allSelected;
-					} else if ( _selectedItem ) {
-						result.selected = transformResult( _selectedItem );
+					if ( _selectedItem ) {
+						allSelected.push( transformResult( _selectedItem ) );
 					}
+					result.selected = allSelected;
 
 					return finish( result )
 
@@ -1045,3 +1041,4 @@ if ( require.main === module ) {
 		console.log( r.query )
 	} )()
 }
+
