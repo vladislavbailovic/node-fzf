@@ -187,6 +187,7 @@ function queryUser ( opts, callback )
 		}
 
 		const debug = false
+		const allSelected = [];
 
 		function handleKeypress ( chunk, key ) {
 			debug && console.log( 'chunk: ' + chunk )
@@ -333,7 +334,6 @@ function queryUser ( opts, callback )
 			if ( key.ctrl ) return
 			if ( key.meta ) return
 
-			const allSelected = [];
 			switch ( name ) {
 				case 'backspace': // ctrl-h
 					{
